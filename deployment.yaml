@@ -1,19 +1,19 @@
-capiVersion: apps/v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: sample-app-deployment
+  name: example-deployment
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: sample-app
+      app: example-app
   template:
     metadata:
       labels:
-        app: sample-app
+        app: example-app
     spec:
       containers:
-      - name: sample-app
-        image: httpd:latest
+      - name: example-container
+        image: httpd
         ports:
         - containerPort: 80
